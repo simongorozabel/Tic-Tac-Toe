@@ -20,6 +20,7 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
+  align-items: center;
   min-width: 320px;
   height: 100vh;
 }
@@ -32,13 +33,19 @@ body {
 
 .board {
   width: fit-content;
+  height: fit-content;
   margin: 40px auto;
   text-align: center;
 }
 
 .board h1 {
-  color: #eee;
-  margin-bottom: 1px;
+  padding: 15px 0;
+  font-size: 60px;
+  margin-bottom: 0px;
+  background: linear-gradient(to top, violet, #eee);
+  -webkit-background-clip: text;
+  background-clip: 0;
+  -webkit-text-fill-color: transparent;
 }
 
 .board button {
@@ -83,8 +90,8 @@ body {
 }
 
 .square.is-selected {
-  color: #fff;
-  background: #09f;
+  color: white;
+  background: purple;
 }
 
 .winner {
@@ -119,7 +126,12 @@ body {
   display: flex;
   gap: 15px;
 }
-
+.winner .text button {
+  background: linear-gradient(rgb(176, 0, 176), #eee);
+  -webkit-background-clip: text;
+  background-clip: 0;
+  -webkit-text-fill-color: transparent;
+}
 .square {
   width: 100px;
   height: 100px;
